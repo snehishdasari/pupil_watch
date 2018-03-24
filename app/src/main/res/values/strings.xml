@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">pupil_watch</string>
+    <string name="tittle">PUPIL WATCH</string>
+    <string name="head">Registration</string>
+    <string name="tag">A Parent school\n communication platform</string>
+    <string name="tag_s">Select the type of the user</string>
+    <string name="parent">Parent</string>
+    <string name="stdnt">Teacher</string>
+    <string name="admn">Admin</string>
+    <string name="terms">Privacy Policy / Terms</string>
+
+    <string name="detail">Please enter your mobile number \n(Provided at school)</string>
+    <string name="btn_otp">Get OTP</string>
+    <string name="title_activity_kid_details">kidDetails</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
