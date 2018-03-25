@@ -36,7 +36,6 @@ public class StudentProfile extends AppCompatActivity {
         t9.setText("TimeTable");
         GridView gv=(GridView)findViewById(R.id.grid) ;
         ArrayList<String> list = new ArrayList<String>();
-        ArrayAdapter<String> grid = new ArrayAdapter<String>(R.layout.g);
 
         gv.addView(t2);
         gv.addView(t3);

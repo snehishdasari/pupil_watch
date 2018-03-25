@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/PupilWatch.iml" filepath="$PROJECT_DIR$/PupilWatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pupil_watch.iml" filepath="$PROJECT_DIR$/pupil_watch.iml" />
+      <module fileurl="file://C:\Users\Rashed\AndroidStudioProjects\PupilWatch\app\app.iml" filepath="C:\Users\Rashed\AndroidStudioProjects\PupilWatch\app\app.iml" />
+      <module fileurl="file://C:\Users\Rashed\AndroidStudioProjects\PupilWatch\pupil_watch.iml" filepath="C:\Users\Rashed\AndroidStudioProjects\PupilWatch\pupil_watch.iml" />
     </modules>
   </component>
 </project>
