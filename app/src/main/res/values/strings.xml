@@ -11,7 +11,7 @@
 
     <string name="detail">Please enter your mobile number \n(Provided at school)</string>
     <string name="btn_otp">Get OTP</string>
-    <string name="title_activity_kid_details">kidDetails</string>
+    <string name="title_activity_kid_details">Your Kids @ XYZ school</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
