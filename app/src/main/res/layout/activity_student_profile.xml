@@ -1,27 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.pupil_watch.StudentProfile">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Student's name"
-        android:textAlignment="center"
-        android:textSize="32sp"
-        android:layout_marginBottom="45dp"
-        android:id="@+id/name"/>
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/student_profile_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:src="@mipmap/ic_person_black_48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="21sp"
+                tools:text="Student Name" />
+
+            <TextView
+                android:id="@+id/student_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:text="Class-Section" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <GridView
-        android:id="@+id/grid"
-        android:layout_below="@+id/name"
-        android:numColumns="3"
-        android:gravity="center"
-        android:stretchMode="columnWidth"
+        android:layout_marginTop="30dp"
+        android:id="@+id/dashboard_grid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></GridView>
+        android:layout_height="match_parent"
+        android:numColumns="3">
 
-</RelativeLayout>
+    </GridView>
+
+</LinearLayout>

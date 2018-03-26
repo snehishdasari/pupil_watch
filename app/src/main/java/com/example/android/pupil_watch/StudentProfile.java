@@ -1,19 +1,59 @@
 package com.example.android.pupil_watch;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class StudentProfile extends AppCompatActivity {
 
+    public static String studentName = new String();
+    public static String studentClass = new String();
+    public static int studentImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_profile);
+
+        TextView nameView = (TextView) findViewById(R.id.student_name);
+        nameView.setText(studentName);
+
+        TextView classView = (TextView) findViewById(R.id.student_class);
+        classView.setText(studentClass);
+
+        ImageView imageView = (ImageView) findViewById(R.id.student_profile_pic);
+        imageView.setImageResource(studentImage);
+
+        final ArrayList<DashboardItem> list = new ArrayList<DashboardItem>();
+        list.add(new DashboardItem("My Profile",R.mipmap.ic_person_black_48dp,new Intent(this,MyProfileActivity.class)));
+        list.add(new DashboardItem("Announcements",R.mipmap.ic_person_black_48dp,new Intent(this,AnnouncementActivity.class)));
+        list.add(new DashboardItem("Attendance",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Results",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Remarks",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Schedule",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Assignments/ Home Works",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Fees",R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Time Table",R.mipmap.ic_person_black_48dp));
+
+
+        GridView dashboardView = (GridView) findViewById(R.id.dashboard_grid);
+        dashboardView.setAdapter(new DashboardAdapter(this,list));
+
+        dashboardView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                DashboardItem dashboardItem = list.get(position);
+                startActivity(dashboardItem.getmIntent());
+            }
+        });
 
     }
 

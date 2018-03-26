@@ -18,16 +18,14 @@
         </activity>
         <activity android:name=".RegisterParent" />
         <activity android:name=".SubmitOTP" />
-        <activity
-            android:name=".kidDetails"
-            android:label="@string/title_activity_kid_details"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StudentProfile" />
         <activity
             android:name=".MyProfileActivity"
             android:label="Student Profile" />
-        <activity android:name=".AnnouncementActivity"
-            android:label="Announcements"></activity>
+        <activity
+            android:name=".AnnouncementActivity"
+            android:label="Announcements" />
+        <activity android:name=".StudentList"></activity>
     </application>
 
 </manifest>

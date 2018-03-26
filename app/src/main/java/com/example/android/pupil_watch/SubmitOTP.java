@@ -15,7 +15,7 @@ public class SubmitOTP extends AppCompatActivity {
 
     public void gotokidDetails(View v)
     {
-        Intent i3 = new Intent(this,kidDetails.class) ;
-        startActivity(i3);
+        Intent i = new Intent(getApplicationContext(),StudentList.class);
+        startActivity(i);
     }
 }
