@@ -56,7 +56,7 @@
         android:id="@+id/button"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:background="@drawable/btn"
+        android:background="@drawable/button_bg_rounded_corners"
 />
     <Button
         android:id="@+id/teacher"
@@ -67,7 +67,7 @@
         android:layout_below="@+id/button"
         android:textAllCaps="false"
         android:layout_marginTop="32dp"
-        android:background="@drawable/btn"
+        android:background="@drawable/button_bg_rounded_corners"
         android:text="@string/stdnt"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"/>
@@ -83,7 +83,7 @@
         android:textAllCaps="false"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:background="@drawable/btn"
+        android:background="@drawable/button_bg_rounded_corners"
         />
 
     <TextView
