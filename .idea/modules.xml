@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PupilWatch.iml" filepath="$PROJECT_DIR$/PupilWatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PupilWatch.iml" filepath="$PROJECT_DIR$/.idea/PupilWatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
