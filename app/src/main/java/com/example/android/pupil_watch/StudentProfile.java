@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class StudentProfile extends AppCompatActivity {
+public class
+StudentProfile extends AppCompatActivity {
 
     public static String studentName = new String();
     public static String studentClass = new String();

@@ -1,38 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.pupil_watch.ParentProfile"
     android:padding="12dp"
     >
 
-<LinearLayout
-    android:id="@+id/name"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/name"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/name_att"
-        android:layout_marginTop="48dp"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="@string/name"
-        android:textColor="@android:color/black"
-        />
+        <TextView
+            android:id="@+id/name_att"
+            android:layout_marginTop="48dp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/name"
+            android:textColor="@android:color/black"
+            />
 
-    <TextView
-        android:id="@+id/Parent_name"
-        android:padding="10dp"
-        android:layout_marginTop="48dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="Mr. XYZENIAR"
-        android:textColor="@android:color/black"
-        />
-</LinearLayout>
+        <TextView
+            android:id="@+id/Parent_name"
+            android:padding="10dp"
+            android:layout_marginTop="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Mr. XYZENIAR"
+            android:textColor="@android:color/black"
+            />
+    </LinearLayout>
 
 
     <LinearLayout
@@ -47,7 +51,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/contact"
             android:textColor="@android:color/black"
             />
@@ -57,7 +61,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="999-999-9999"
             android:textColor="@android:color/black"
             />
@@ -76,7 +80,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/mail"
             android:textColor="@android:color/black"
             />
@@ -86,7 +90,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="16sp"
             android:text="xyzeniar99@gmail.com"
             android:textColor="@android:color/black"
             />
@@ -100,21 +104,21 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/cont_mail_att"
+            android:id="@+id/add_att"
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/add"
             android:textColor="@android:color/black"
             />
 
         <TextView
-            android:id="@+id/Parent_mail"
+            android:id="@+id/Parent_add"
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/add_string"
             android:textColor="@android:color/black"
             />
@@ -132,7 +136,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/prof"
             android:textColor="@android:color/black"
             />
@@ -142,7 +146,7 @@
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="Priate Employee"
             android:textColor="@android:color/black"
             />

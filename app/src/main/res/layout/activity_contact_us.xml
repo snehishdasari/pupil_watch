@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.pupil_watch.ContactUs"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/Contact_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Contact_us_msg"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:id="@+id/Name"
+        android:layout_below="@id/Contact_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/cont_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:background="@android:drawable/alert_light_frame"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/Name"
+        android:id="@+id/Mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Contact_us_mail"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/ed_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:background="@android:drawable/alert_light_frame"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/Mail"
+        android:id="@+id/Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/Phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Contact_us_phone"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/edPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:background="@android:drawable/alert_light_frame"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Contact_us_reason"
+        android:layout_below="@+id/Phone"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+            />
+    <EditText
+        android:id="@+id/Reason_msg"
+        android:layout_below="@id/Reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/alert_light_frame"
+        android:minLines="5"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_sq_corner"
+        android:text="@string/Contact_us_btn"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

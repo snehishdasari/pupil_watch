@@ -18,13 +18,27 @@
 
     <string name="action_settings">Settings</string>
 
-    <!--///these are used in ParentsProfile.xml-->
+    <!--///used in ParentsProfile.xml-->
 
-    <string name="name"   >Name :</string>
+    <string name="name">Name :</string>
     <string name="contact">Contact Number :</string>
-    <string name="mail"   >Contact mail :</string>
-    <string name="add"    >Address :</string>
+    <string name="mail">Contact mail :</string>
+    <string name="add">Address :</string>
     <string name="add_string">Flat 222,\nStreet No.8,\nPark Avenue,\nBanjara Hills,Hyderabad,500006</string>
-    <string name="prof"   >Profession :</string>
+    <string name="prof">Profession :</string>
     <string name="butn">  Report a change in the above data</string>
+
+    <!--///used in Feedback.xml-->
+
+    <string name="feedback_msg">Provide your feedback below</string>
+    <string name="textbox_hint">Feedback Comments</string>
+    <string name="submit_btn">Submit feedback</string>
+
+    <!--///used in ContactUs.xml-->
+
+    <string name="Contact_us_msg">Please reach out to us by sending us your details. We shall reach out to you.</string>
+    <string name="Contact_us_mail">Mail    :   </string>
+    <string name="Contact_us_phone">Phone :</string>
+    <string name="Contact_us_btn">submit</string>
+    <string name="Contact_us_reason">Reason for inquiry:</string>
 </resources>
