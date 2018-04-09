@@ -1,46 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context="com.example.android.pupil_watch.Feedback"
-    android:padding="12dp"
-    android:orientation="vertical">
+        >
 
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/drawer_view"/>
 
-
-        <TextView
-            android:id="@+id/feedback_msg"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/feedback_msg"
-            android:layout_marginTop="28dp"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            />
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_sq_corner"
-            android:textSize="22sp"
-            android:layout_margin="18dp"
-            android:minLines="6"
-            android:hint="  Feedback Comments"
-            />
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.AppBarOverlay">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_sq_corner"
-            android:text="@string/submit_btn"
-            android:textAllCaps="false"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/colorPrimary"
+                            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    </>
+                </android.support.design.widget.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:id="@+id/feedback_msg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/feedback_msg"
+                            android:layout_marginTop="28dp"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            />
+
+                        <EditText
+                            android:id="@+id/feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_sq_corner"
+                            android:textSize="22sp"
+                            android:layout_margin="18dp"
+                            android:minLines="6"
+                            android:hint="  Feedback Comments"
+                            />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_sq_corner"
+                            android:text="@string/submit_btn"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="120dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"/>
+
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
 
 

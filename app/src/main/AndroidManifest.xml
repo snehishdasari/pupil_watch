@@ -27,11 +27,6 @@
             android:label="Announcements" />
         <activity android:name=".StudentList" />
         <activity android:name=".ParentProfile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Feedback" />
         <activity android:name=".AboutUs" />
