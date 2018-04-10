@@ -6,32 +6,32 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_ParentsProfile"
+            android:id="@+id/nav_parents_profile"
 
             android:title="Parent's Profle"
             />
         <item
-            android:id="@+id/nav_Feedback"
+            android:id="@+id/nav_feedback"
 
             android:title="Feedback" />
         <item
-            android:id="@+id/nav_AboutUs"
+            android:id="@+id/nav_about_us"
 
             android:title="About Us" />
         <item
-            android:id="@+id/nav_ContactUs"
+            android:id="@+id/nav_contact_us"
 
             android:title="Contact Us" />
         <item
-            android:id="@+id/nav_Faq"
+            android:id="@+id/nav_faq"
 
             android:title="FAQ's" />
         <item
-            android:id="@+id/PolicynTerms"
+            android:id="@+id/nav_policy_terms"
 
             android:title="Policy and Terms" />
         <item
-            android:id="@+id/nav_Logout"
+            android:id="@+id/nav_logout"
 
             android:title="Log Out" />
     </group>

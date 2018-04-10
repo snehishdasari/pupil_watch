@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F:\Aghamarsh\pupil_watch\.idea\PupilWatch.iml" filepath="F:\Aghamarsh\pupil_watch\.idea\PupilWatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PupilWatch-dev.iml" filepath="$PROJECT_DIR$/PupilWatch-dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pupil_watch.iml" filepath="$PROJECT_DIR$/pupil_watch.iml" />
     </modules>
   </component>
 </project>

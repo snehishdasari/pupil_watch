@@ -13,9 +13,8 @@ public class loginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
     }
 
-    public void regparent(View v)
-    {
-        Intent i = new Intent(this,RegisterParent.class) ;
+    public void regparent(View v) {
+        Intent i = new Intent(this, RegisterParent.class);
         startActivity(i);
     }
 }

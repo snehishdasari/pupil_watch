@@ -2,6 +2,7 @@ package com.example.android.pupil_watch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -9,17 +10,24 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AnnouncementActivity extends AppCompatActivity
+public class StudentProfileActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static String studentName = new String();
+    public static String studentClass = new String();
+    public static int studentImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_announcement);
+        setContentView(R.layout.activity_student_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,13 +40,42 @@ public class AnnouncementActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ArrayList<Announcement> announcementList = new ArrayList<Announcement>();
-        announcementList.add(new Announcement("Dance Contest","6 to 8 ","2 - 3 PM","Lets Dance"));
-        announcementList.add(new Announcement("School Anniversary Celebrations","1 to 10 ","1 - 4 PM","Celebrations Time"));
+        TextView nameView = (TextView) findViewById(R.id.student_name);
+        nameView.setText(studentName);
 
-        AnnouncementAdapter announcements = new AnnouncementAdapter(this,announcementList);
-        ListView listView = (ListView) findViewById(R.id.announcement_list);
-        listView.setAdapter(announcements);
+        TextView classView = (TextView) findViewById(R.id.student_class);
+        classView.setText(studentClass);
+
+        ImageView imageView = (ImageView) findViewById(R.id.student_profile_pic);
+        imageView.setImageResource(studentImage);
+
+        final ArrayList<DashboardItem> list = new ArrayList<DashboardItem>();
+        list.add(new DashboardItem("My Profile", R.mipmap.ic_person_black_48dp, new Intent(this, MyProfileActivity.class)));
+        list.add(new DashboardItem("Announcements", R.mipmap.ic_person_black_48dp, new Intent(this, AnnouncementActivity.class)));
+        list.add(new DashboardItem("Attendance", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Results", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Remarks", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Schedule", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Assignments/ Home Works", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Fees", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Time Table", R.mipmap.ic_person_black_48dp));
+
+
+        GridView dashboardView = (GridView) findViewById(R.id.dashboard_grid);
+        dashboardView.setAdapter(new DashboardAdapter(this, list));
+
+        dashboardView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                DashboardItem dashboardItem = list.get(position);
+
+                Intent intent = dashboardItem.getmIntent();
+                if (intent == null) {
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
