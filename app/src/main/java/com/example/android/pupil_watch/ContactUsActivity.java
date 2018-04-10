@@ -9,17 +9,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.ListView;
 
-import java.util.ArrayList;
-
-public class AnnouncementActivity extends AppCompatActivity
+public class ContactUsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_announcement);
+        setContentView(R.layout.activity_contact_us);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -31,14 +28,6 @@ public class AnnouncementActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        ArrayList<Announcement> announcementList = new ArrayList<Announcement>();
-        announcementList.add(new Announcement("Dance Contest","6 to 8 ","2 - 3 PM","Lets Dance"));
-        announcementList.add(new Announcement("School Anniversary Celebrations","1 to 10 ","1 - 4 PM","Celebrations Time"));
-
-        AnnouncementAdapter announcements = new AnnouncementAdapter(this,announcementList);
-        ListView listView = (ListView) findViewById(R.id.announcement_list);
-        listView.setAdapter(announcements);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -54,7 +43,7 @@ public class AnnouncementActivity extends AppCompatActivity
         } else if (id == R.id.nav_about_us) {
             startActivity(new Intent(getApplicationContext(),AboutUsActivity.class));
         } else if (id == R.id.nav_contact_us) {
-            startActivity(new Intent(getApplicationContext(),ContactUsActivity.class));
+
         } else if (id == R.id.nav_faq) {
 
         } else if (id == R.id.nav_policy_terms) {

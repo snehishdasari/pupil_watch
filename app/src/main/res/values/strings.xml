@@ -9,7 +9,7 @@
     <string name="parent">Parent</string>
     <string name="stdnt">Teacher</string>
     <string name="admn">Admin</string>
-    <string name="terms">Privacy Policy / Terms</string>
+    <string name="terms"><u>Privacy Policy / Terms</u></string>
 
     <string name="detail">Please enter your mobile number \n(Provided at school)</string>
     <string name="btn_otp">Get OTP</string>
@@ -43,4 +43,12 @@
     <string name="Contact_us_phone">Phone :</string>
     <string name="Contact_us_btn">submit</string>
     <string name="Contact_us_reason">Reason for inquiry:</string>
+    <string name="title_activity_student_list">StudentListActivity</string>
+    <string name="title_activity_student_profile">StudentProfileActivity</string>
+    <string name="title_activity_my_profile2">MyProfileActivity2</string>
+    <string name="title_activity_announcement2">AnnouncementActivity2</string>
+    <string name="title_activity_parent_profile">ParentProfileActivity</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="title_activity_contact_us">ContactUsActivity</string>
 </resources>

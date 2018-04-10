@@ -1,27 +1,25 @@
 package com.example.android.pupil_watch;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class
-StudentProfile extends AppCompatActivity {
+public class StudentProfileActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout mDrawerLayout;
     public static String studentName = new String();
     public static String studentClass = new String();
     public static int studentImage;
@@ -30,26 +28,18 @@ StudentProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_profile);
-
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                item.setChecked(true);
-                mDrawerLayout.closeDrawers();
-                return true;
-            }
-        });
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawerLayout.addDrawerListener(toggle);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         TextView nameView = (TextView) findViewById(R.id.student_name);
         nameView.setText(studentName);
 
@@ -62,10 +52,10 @@ StudentProfile extends AppCompatActivity {
         final ArrayList<DashboardItem> list = new ArrayList<DashboardItem>();
         list.add(new DashboardItem("My Profile", R.mipmap.ic_person_black_48dp, new Intent(this, MyProfileActivity.class)));
         list.add(new DashboardItem("Announcements", R.mipmap.ic_person_black_48dp, new Intent(this, AnnouncementActivity.class)));
-        list.add(new DashboardItem("Attendance", R.mipmap.ic_person_black_48dp, new Intent(this, ParentProfile.class)));
-        list.add(new DashboardItem("Exam Results", R.mipmap.ic_person_black_48dp, new Intent(this, Feedback.class)));
-        list.add(new DashboardItem("Remarks", R.mipmap.ic_person_black_48dp, new Intent(this, AboutUs.class)));
-        list.add(new DashboardItem("Exam Schedule", R.mipmap.ic_person_black_48dp, new Intent(this, ContactUs.class)));
+        list.add(new DashboardItem("Attendance", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Results", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Remarks", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Exam Schedule", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Assignments/ Home Works", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Fees", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Time Table", R.mipmap.ic_person_black_48dp));
@@ -86,7 +76,32 @@ StudentProfile extends AppCompatActivity {
                 }
             }
         });
-
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_parents_profile) {
+            startActivity(new Intent(getApplicationContext(),ParentProfileActivity.class));
+        } else if (id == R.id.nav_feedback) {
+            startActivity(new Intent(getApplicationContext(),FeedbackActivity.class));
+        } else if (id == R.id.nav_about_us) {
+            startActivity(new Intent(getApplicationContext(),AboutUsActivity.class));
+        } else if (id == R.id.nav_contact_us) {
+            startActivity(new Intent(getApplicationContext(),ContactUsActivity.class));
+        } else if (id == R.id.nav_faq) {
+
+        } else if (id == R.id.nav_policy_terms) {
+
+        } else if (id == R.id.nav_logout){
+            startActivity(new Intent(getApplicationContext(),StudentListActivity.class));
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

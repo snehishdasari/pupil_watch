@@ -33,9 +33,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tagline"
+        android:layout_above="@id/button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/tag_s"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -89,8 +89,9 @@
         android:layout_alignParentStart="true"
         android:padding="10dp"
         android:text="@string/terms"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:textAlignment="center"
         android:textColor="#0000cd"
-
         />
 </RelativeLayout>

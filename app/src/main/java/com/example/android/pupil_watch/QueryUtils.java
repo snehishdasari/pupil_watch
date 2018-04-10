@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.pupil_watch.StudentList.LOG_TAG;
+import static com.example.android.pupil_watch.StudentListActivity.LOG_TAG;
 
 /**
  * Created by Rashed on 10-04-2018.
