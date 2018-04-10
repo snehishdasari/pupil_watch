@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,52 +11,49 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tittle"
         android:layout_centerHorizontal="true"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:text="@string/tittle"
         android:textColor="@android:color/black"
-        android:layout_marginTop="60dp">
-    </TextView>
+        android:textSize="28sp"
+        android:textStyle="bold"></TextView>
 
     <TextView
         android:id="@+id/tagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tag"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:textAlignment="center"
         android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/tag"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:layout_marginTop="30dp">
-    </TextView>
+        android:textSize="18sp"></TextView>
 
     <TextView
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tag_s"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/tagline"
-        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/tag_s"
         android:textAlignment="center"
-        android:layout_marginTop="20dp">
-    </TextView>
+        android:textColor="@android:color/black"
+        android:textSize="18sp"></TextView>
 
     <Button
-        android:onClick="regparent"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/parent"
-        android:textAllCaps="false"
-        android:id="@+id/button"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/button_bg_rounded_corners"
-/>
+        android:onClick="regparent"
+        android:text="@string/parent"
+        android:textAllCaps="false" />
+
     <Button
         android:id="@+id/teacher"
         android:layout_width="match_parent"
@@ -65,26 +61,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button"
-        android:textAllCaps="false"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:text="@string/stdnt"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp"
         android:layout_below="@+id/teacher"
-        android:text="@string/admn"
-        android:textAllCaps="false"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button_bg_rounded_corners"
-        />
+        android:text="@string/admn"
+        android:textAllCaps="false" />
 
     <TextView
         android:layout_width="match_parent"
@@ -92,8 +87,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="@string/terms"
         android:padding="10dp"
+        android:text="@string/terms"
         android:textAlignment="center"
         android:textColor="#0000cd"
 
