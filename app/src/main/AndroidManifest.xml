@@ -32,43 +32,55 @@
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
         <activity
             android:name=".AnnouncementActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
         <activity
             android:name=".ParentProfileActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
         <activity
             android:name=".FeedbackActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
         <activity
             android:name=".AboutUsActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
         <activity
             android:name=".ContactUsActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentProfileActivity"/>
+                android:value=".StudentProfileActivity" />
         </activity>
+        <activity
+            android:name=".AttendanceActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FaqActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HomeworkActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PolicyntermsActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

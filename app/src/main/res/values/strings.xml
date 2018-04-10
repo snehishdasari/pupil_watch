@@ -52,4 +52,15 @@
     <string name="title_activity_feedback">FeedbackActivity</string>
     <string name="title_activity_about_us">AboutUsActivity</string>
     <string name="title_activity_contact_us">ContactUsActivity</string>
+    <string name="title_activity_attendance">AttendanceActivity</string>
+
+    <!--///used in Attendance.xml-->
+    <string name="at_month">Month:</string>
+    <string name="at_year">Year:</string>
+    <string name="at_work_days">Working Days:</string>
+    <string name="at_holdays">Holidays:</string>
+    <string name="at_absent">Absence:</string>
+    <string name="title_activity_faq">FaqActivity</string>
+    <string name="title_activity_homework">HomeworkActivity</string>
+    <string name="title_activity_policynterms">PolicyntermsActivity</string>
 </resources>

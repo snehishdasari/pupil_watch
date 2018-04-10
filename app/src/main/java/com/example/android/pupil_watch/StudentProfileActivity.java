@@ -52,11 +52,11 @@ public class StudentProfileActivity extends AppCompatActivity
         final ArrayList<DashboardItem> list = new ArrayList<DashboardItem>();
         list.add(new DashboardItem("My Profile", R.mipmap.ic_person_black_48dp, new Intent(this, MyProfileActivity.class)));
         list.add(new DashboardItem("Announcements", R.mipmap.ic_person_black_48dp, new Intent(this, AnnouncementActivity.class)));
-        list.add(new DashboardItem("Attendance", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Attendance", R.mipmap.ic_person_black_48dp, new Intent(this,AttendanceActivity.class)));
         list.add(new DashboardItem("Exam Results", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Remarks", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Exam Schedule", R.mipmap.ic_person_black_48dp));
-        list.add(new DashboardItem("Assignments/ Home Works", R.mipmap.ic_person_black_48dp));
+        list.add(new DashboardItem("Assignments/ Home Works", R.mipmap.ic_person_black_48dp, new Intent(this,HomeworkActivity.class)));
         list.add(new DashboardItem("Fees", R.mipmap.ic_person_black_48dp));
         list.add(new DashboardItem("Time Table", R.mipmap.ic_person_black_48dp));
 
@@ -93,9 +93,9 @@ public class StudentProfileActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact_us) {
             startActivity(new Intent(getApplicationContext(),ContactUsActivity.class));
         } else if (id == R.id.nav_faq) {
-
+            startActivity(new Intent(getApplicationContext(),FaqActivity.class));
         } else if (id == R.id.nav_policy_terms) {
-
+            startActivity(new Intent(getApplicationContext(),PolicyntermsActivity.class));
         } else if (id == R.id.nav_logout){
             startActivity(new Intent(getApplicationContext(),StudentListActivity.class));
         }

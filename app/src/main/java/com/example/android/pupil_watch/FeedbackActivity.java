@@ -45,9 +45,9 @@ public class FeedbackActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact_us) {
             startActivity(new Intent(getApplicationContext(),ContactUsActivity.class));
         } else if (id == R.id.nav_faq) {
-
+            startActivity(new Intent(getApplicationContext(),FaqActivity.class));
         } else if (id == R.id.nav_policy_terms) {
-
+            startActivity(new Intent(getApplicationContext(),PolicyntermsActivity.class));
         } else if (id == R.id.nav_logout){
             startActivity(new Intent(getApplicationContext(),StudentListActivity.class));
         }
