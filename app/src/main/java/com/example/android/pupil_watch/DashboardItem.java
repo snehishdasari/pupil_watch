@@ -15,6 +15,7 @@ public class DashboardItem {
     public DashboardItem(String title, int image){
         mTitle = title;
         mImage = image;
+        mIntent = null;
     }
 
     public DashboardItem(String title, int image, Intent intent){
