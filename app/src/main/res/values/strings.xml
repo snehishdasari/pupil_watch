@@ -1,6 +1,7 @@
 <resources>
     <string name="no_internet_connection">No internet connection.</string>
     <string name="no_students">No students found.</string>
+    <string name="no_announcements">No announcements found.</string>
     <string name="app_name">Pupil Watch</string>
     <string name="tittle">PUPIL WATCH</string>
     <string name="head">Registration</string>

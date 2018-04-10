@@ -17,8 +17,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.pupil_watch.StudentListActivity.LOG_TAG;
-
 /**
  * Created by Rashed on 10-04-2018.
  */
@@ -28,23 +26,7 @@ public class QueryUtils {
     private QueryUtils() {
     }
 
-    public static List<Student> fetchStudentData(String requestUrl){
-
-        URL url = createUrl(requestUrl);
-
-        String jsonResponse = null;
-        try {
-            jsonResponse = makeHttpRequest(url);
-        } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem making the HTTP request.", e);
-        }
-
-        List<Student> students = extractStudentsFromJson(jsonResponse);
-
-        return students;
-    }
-
-    private static URL createUrl(String stringUrl) {
+    public static URL createUrl(String stringUrl, String LOG_TAG) {
         URL url = null;
         try {
             url = new URL(stringUrl);
@@ -54,7 +36,7 @@ public class QueryUtils {
         return url;
     }
 
-    private static String makeHttpRequest(URL url) throws IOException {
+    public static String makeHttpRequest(URL url, String LOG_TAG) throws IOException {
         String jsonResponse = "";
 
         // If the URL is null, then return early.
@@ -109,30 +91,6 @@ public class QueryUtils {
         return output.toString();
     }
 
-    private static List<Student> extractStudentsFromJson(String studentJson){
 
-        if (TextUtils.isEmpty(studentJson)) {
-            return null;
-        }
-
-        List<Student> students = new ArrayList<>();
-
-        try{
-            JSONObject baseJsonResponse = new JSONObject(studentJson);
-
-            String name = baseJsonResponse.getString("studentName");
-            String standard = baseJsonResponse.getString("standard");
-            String section = baseJsonResponse.getString("section");
-
-            String cl = standard.charAt(0) + "-"+ section;
-
-            Student student = new Student(R.mipmap.ic_person_black_48dp,name,cl);
-            students.add(student);
-        }
-        catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
-        }
-        return  students;
-    }
 
 }
