@@ -68,7 +68,7 @@ public class HomeworkActivity extends AppCompatActivity
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
 
-                if(month<10){
+                if(month<9){
                     setText(dayOfMonth + "-0" + (month + 1) + "-" + year);
                 }
                 else{
