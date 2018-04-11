@@ -67,7 +67,13 @@ public class HomeworkActivity extends AppCompatActivity
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                setText(dayOfMonth + "-" + (month + 1) + "-" + year);
+
+                if(month<10){
+                    setText(dayOfMonth + "-0" + (month + 1) + "-" + year);
+                }
+                else{
+                    setText(dayOfMonth + "-" + (month + 1) + "-" + year);
+                }
             }
         });
     }
